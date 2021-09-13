@@ -10,7 +10,7 @@ Forum App, with a frontend built in React & Redux and a backend built in Django 
 
 Check out [FRONTEND LIVE DEMO](https://front-end-dairyqueen.herokuapp.com/) here!!
 
-Check out [API LIVE DEMO]:(https://back-end-dairyqueen.herokuapp.com/) here!!
+Check out [API LIVE DEMO](https://back-end-dairyqueen.herokuapp.com/) here!!
 
 ## Tech used
 
