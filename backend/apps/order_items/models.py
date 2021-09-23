@@ -1,9 +1,8 @@
 # Create your models here.
 from django.db import models
 from cloudinary.models import CloudinaryField
-from apps.users.models import User
-from apps.order_items.models import Order_item
-
+from apps.orders.models import Order
+from apps.items.models import Item
 
 class Order_item(models.Model):
     class Meta(object):

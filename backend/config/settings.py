@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'apps.orders',
     'apps.users',
     'apps.order_items',
-    'apps.cart_items',
     'cloudinary',
     'django_filters',
 ]

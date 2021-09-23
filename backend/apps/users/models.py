@@ -1,9 +1,6 @@
 # Create your models here.
 from django.db import models
 from cloudinary.models import CloudinaryField
-from apps.users.models import User
-
-
 
 class User(models.Model):
     class Meta(object):
@@ -29,3 +26,4 @@ class User(models.Model):
     updated_at = models.DateTimeField(
         'Updated Datetime', blank=True, auto_now=True
     )
+
