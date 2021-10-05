@@ -1,13 +1,15 @@
 # Create your models here.
 from django.db import models
+from config.constants import *
 from cloudinary.models import CloudinaryField
 
 
 class Item(models.Model):
     class Meta(object):
         db_table = 'item'
-    status= models.CharField(
-        'Status', blank=False, null=False, max_length=15, db_index=True, default='Anonymous'  
+    
+    STATUS= models.CharField(
+        'Status', blank=False, default='inactive' ,null=False, max_length=50, db_index=True,choices= STATUS 
     )
     name = models.CharField(
         'Name', blank=False, null=False, max_length=120, db_index=True, default='Anonymous'
