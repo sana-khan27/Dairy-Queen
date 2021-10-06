@@ -1,10 +1,14 @@
 import React from 'react'
 
-export default function Home() {
-  return (
-    <>
-    <section class="main-visual">
+export default function Cart() {
+    return (
+        <div>
+           <section class="main-visual">
         <img src="images\Intersection_3.png" width="1350px" height="500px" alt="" />
+    </section>
+
+    
+
     <ul class="items">
         <li>
             <img src="images\AdobeStock_162471421.png" class="item-image" alt="" />
@@ -51,7 +55,10 @@ export default function Home() {
             </div>
         </li>
     </ul>
-    </section>
-    </>
-  )
+    
+
+
+ 
+        </div>
+    )
 }
