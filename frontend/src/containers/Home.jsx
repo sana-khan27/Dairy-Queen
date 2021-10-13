@@ -1,57 +1,38 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import ImgIntersection from "../assets/img/Intersection_3.png"
 import ImgItem1 from "../assets/img/AdobeStock_162471421.png"
+import {useDispatch, useSelector} from "react-redux"
+import {getItems} from "../reducks/items/selectors"
+import {fetchItems} from "../reducks/items/operations"
+import {fetchCarts} from "../reducks/carts/operations"
+import Item from "../components/Common/Item"
+
 
 export default function Home() {
+    const selector = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const items = getItems(selector);
+
+  useEffect(() => {
+    dispatch(fetchItems());
+    // if (localStorage.getItem("LOGIN_USER_KEY")) {
+    //   dispatch(fetchCarts());
+    // }
+  }, []);
+
+    
+
   return (
     <>
     <section class="main-visual">
         <img src={ImgIntersection} width="1350px" height="500px" alt="" />
     <ul class="items">
+        {items && items.map((item) => (
+
         <li>
-            <img src={ImgItem1} class="item-image" alt="" />
-            <div class="info">
-                <div class="name">Crazy Freak Shake</div>
-                <div class="info-bottom">
-                    <div class="price">$16</div>
-                    <div class="add">Add +</div>
-                </div>
-            </div>
+            <Item key={item.id} item={item} />
         </li>
-        <li>
-            <img src={ImgItem1} class="item-image" alt="" />
-            <div class="info">
-                <div class="name">Crazy Freak Shake</div>
-                <div class="info-bottom">
-                    <div class="price">$16</div>
-                    <div class="add">Add +</div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <img src={ImgItem1} class="item-image" alt="" />
-            <div class="info">
-                <div class="name">Crazy Freak Shake</div>
-                <div class="info-bottom">
-                    <div class="price">$16</div>
-                    <div class="number">
-                        <span class="minus">－</span>
-                        <span class="count">1</span>
-                        <span class="plus">+</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <img src={ImgItem1} class="item-image" alt="" />
-            <div class="info">
-                <div class="name">Crazy Freak Shake</div>
-                <div class="info-bottom">
-                    <div class="price">$16</div>
-                    <div class="add">Add +</div>
-                </div>
-            </div>
-        </li>
+        ))}
     </ul>
     </section>
     </>
