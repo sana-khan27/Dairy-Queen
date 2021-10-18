@@ -102,4 +102,33 @@ signUp = async (user_name, email, password) => {
       });
     return savedPost;
   };
+
+
+signIn = async (email, password) => {
+    const savedPost = await api
+      .post("/users/signin/", {
+        email: email,
+        password: password,
+      })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+    return savedPost;
+  };
+
+  getCarts = async () => {
+    const carts = await api
+      .get("carts/")
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+    return carts;
+  };
 }
+

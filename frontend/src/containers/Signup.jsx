@@ -52,7 +52,7 @@ export default function Signup() {
                     <input type="text" name="email" id="emaul" class="input-box" placeholder="Email Address" onChange={inputEmail} />
                     <input type="text" name="password" id="password" class="input-box" placeholder="Password" onChange={inputPassword} />
                     <br />
-                    <input type="button" class="signup-btn" onSubmit={signUpButton} value="SIGN UP" />
+                    <input type="button" class="signup-btn" onClick={signUpButton} value="SIGN UP" />
                     
                     </form>
                     <p>Already a Member?<a href="/signin">Sign in</a></p>
