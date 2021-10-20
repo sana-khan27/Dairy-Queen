@@ -32,12 +32,11 @@ export default function Item({item}) {
   }, [subtotal]);
 
   const clickAddCart = () => {
-    if (key) {
+    // if (key) {
       dispatch(addCart(item));
-    } else {
-      dispatch(push("/signin"));
+    // } else {
+    //   dispatch(push("/signin"));
     }
-  };
 
   const clickPlusCart = () => {
     dispatch(increaseCart(particularCart.id));
@@ -79,14 +78,3 @@ export default function Item({item}) {
         
     )
 }
-
-<div>
-            <img src={item.image} class="item-image" alt="" />
-            <div class="info">
-                <div class="name">{item.name}</div>
-                <div class="info-bottom">
-                    <div class="price">$ {item.price}</div>
-                    <div class="add">Add +</div>
-                </div>
-            </div>
-        </div>

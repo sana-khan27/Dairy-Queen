@@ -15,9 +15,9 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(fetchItems());
-    // if (localStorage.getItem("LOGIN_USER_KEY")) {
-    //   dispatch(fetchCarts());
-    // }
+    if (localStorage.getItem("LOGIN_USER_KEY")) {
+      dispatch(fetchCarts());
+    }
   }, []);
 
     

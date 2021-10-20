@@ -46,7 +46,7 @@ import { push } from "connected-react-router";
                     <input type="text" class="input-box" placeholder="Password" onChange={inputPassword} />
                     <br/>
                     <input type="button" class="joinus-btn" onClick={JoinUsButton} value="JOIN US" />
-                    <p>Not a Member?<a href="/">Join Us</a></p>
+                    <p>Not a Member?<a href="/signup">Join Us</a></p>
                     </form>
                     
                     

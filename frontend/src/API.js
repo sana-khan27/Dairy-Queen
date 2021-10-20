@@ -130,5 +130,58 @@ signIn = async (email, password) => {
       });
     return carts;
   };
+  
+  addCarts = async (item_id) => {
+    const savedCart = await api
+      .post("/carts/add/", {
+        item: item_id,
+        quantity: 1,
+      })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+    return savedCart;
+  };
+
+  updateCarts = async (cart_id, quantity) => {
+    const savedCart = await api
+      .put("/carts/update/" + cart_id + "/", {
+        quantity: quantity,
+      })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+    return savedCart;
+  };
+
+  deleteCart = async (cart_id) => {
+    const response = await api
+      .delete("/carts/delete/" + cart_id + "/")
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+    return response;
+  };
+
+  orderAdd = async (params = {}) => {
+    const order = await api
+      .post("/orders/add/", params)
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+    return order;
+  };
 }
 
