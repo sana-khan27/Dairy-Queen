@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
     <section class="main-visual">
-        <img src={ImgIntersection} width="1350px" height="500px" alt="" />
+        <img src={ImgIntersection} width="100%" height="100%" alt="" />
     <ul class="items">
         {items && items.map((item) => (
 

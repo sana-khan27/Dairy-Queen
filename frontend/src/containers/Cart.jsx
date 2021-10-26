@@ -17,11 +17,11 @@ export default function Cart() {
   const items = getItems(selector);
 
   useEffect(() => {
-//     if (user.token != "") {
+    if (user.token != "") {
       dispatch(fetchCarts(user.token));
-//       console.log("test");
-//       console.log(carts);
-    // }
+      console.log("test");
+      console.log(carts);
+    }
   }, [user]);
 
   useEffect(() => {
