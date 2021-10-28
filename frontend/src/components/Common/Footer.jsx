@@ -8,7 +8,7 @@ function Footer({price}) {
                     <span class="subtotal-test">Subtotal:</span>
                     <span class="subtotal-price">$ {price}</span>
                 </div>
-                <button class="btn-small">CheckOut</button>
+                <a href="/shipment"><button class="btn-small">CheckOut</button></a>
             </footer>
         </div>
     )
