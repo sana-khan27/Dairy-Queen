@@ -31,21 +31,21 @@ export default function Cart() {
 
 
     return (
-        <div>
-           <section class="main-visual">
-        <img src={ImgIntersection} width="1350px" height="500px" alt="" />
-        <ul>
-          {
-            (carts,
+        <>
+        <section class="main-visual">
+        <img src={ImgIntersection} width="100%" height="100%" alt="" />
+    <ul class="items">
+        {(carts,
             items &&
               carts.map((cart) => (
-                <li>
-                  <CartItem cart={cart.item} key={cart.item.id} />
-                </li>
-              )))
-          }
-        </ul>
+
+        <li>
+            <CartItem cart={cart} key={cart.item.id} />
+        </li>
+        ))
+        )}
+    </ul>
     </section>
-     </div>
-    )
-}
+     </>
+    ) 
+              }

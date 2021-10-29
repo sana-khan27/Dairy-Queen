@@ -32,6 +32,13 @@ p.item-name {
     font-weight: 500;
 }
 
+ul.items li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  padding-bottom: 14px;
+}
+
 
 ul.category {
   padding: 30px 0;
@@ -81,7 +88,7 @@ header .row {
 }
 
 .item-info {
-  padding: 6% 0 0 0;
+  padding: 6% 0 10% 0;
 }
 
 @media screen and (max-width: 300px) {
@@ -95,7 +102,7 @@ header .row {
 *****************************/
 
 .main-visual ul.items {
-  padding: 20px 0;
+    padding: 0 0 010% 0;
 }
 
 .main-visual ul.items li {

@@ -13,38 +13,29 @@ export default function CartItem({cart}) {
   const dispatch = useDispatch();
   const carts = getCarts(selector);
   const subtotal = getSubtotal(selector);
-  const [particularCart, setParticularCart] = useState(null);
-
-  useEffect(() => {
-    if (carts != undefined && carts.length > 0) {
-      setParticularCart(carts[0]);
-    } else {
-      setParticularCart(null);
-    }
-  }, [carts, subtotal]);
 
   const clickPlusCart = () => {
-    dispatch(increaseCart(particularCart.id));
+    dispatch(increaseCart(cart.id));
   };
   const clickMinusCart = () => {
-    dispatch(decreaseCart(particularCart.id));
+    dispatch(decreaseCart(cart.id));
   };
 
     return (
     <>
       <div class="item-info">
         <div class="info1">
-          <p class="item-name">{cart.name}</p>
-          <p class="item-description">{cart.description}</p>
+          <p class="item-name">{cart.item.name}</p>
+          <p class="item-description">{cart.item.description}</p>
         </div>
         <div class="info2">
-          <p class="price">$ {cart.price}</p>
-          {particularCart && particularCart.quantity > 0 && (
+          <p class="price">$ {cart.item.price}</p>
+          {cart && cart.quantity > 0 && (
             <div class="add-btn">
               <span class="minus" onClick={clickMinusCart}>
                 －
               </span>
-              <span class="count">{particularCart.quantity} </span>
+              <span class="count">{cart.quantity} </span>
               <span class="plus" onClick={clickPlusCart}>
                 +
               </span>

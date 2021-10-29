@@ -25,10 +25,16 @@ function Header() {
             <div class="row">
                 <a href="#default" class="logo">DQ Dairy Queen</a>
             <div class="navbar-links">
+                {key ? (
+
                 <span class="sign-in" onClick={signOutButton}>Logout</span>
-                <a class="sign-in" href="/signin">Sign in</a>
-                <a href="/cart" >
-                <img src={ImgCart} /></a>
+                ) : (
+                    <a class="sign-in" href="/signin">Sign in</a>
+                    )
+                }
+                {checkUser && (
+                <a href="/cart" ><img src={ImgCart} /></a>
+                )}
             </div>
             </div>
         </header>
