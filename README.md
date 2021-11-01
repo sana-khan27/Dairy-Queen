@@ -24,7 +24,7 @@ Check out [API LIVE DEMO](https://dairy-queen-backened.herokuapp.com/) here!!
 1. Git Clone
 
 ```
-git clone git@github.com:Tech-i-s/techis-wd-forum-django-react.git
+git clone https://github.com/sana-khan27/Dairy-Queen.git
 ```
 
 2. Backend setting
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
-# Open http://127.0.0.1:8000/posts/
+# Open http://127.0.0.1:8000/
 ```
 
 3. Frontend setting
