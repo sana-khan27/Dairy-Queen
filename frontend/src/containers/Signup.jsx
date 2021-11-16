@@ -50,7 +50,7 @@ export default function Signup() {
                     <form action="/">
                     <input type="text" name="username" id="username" class="input-box" placeholder="User Name" onChange={inputUserName} />
                     <input type="text" name="email" id="emaul" class="input-box" placeholder="Email Address" onChange={inputEmail} />
-                    <input type="text" name="password" id="password" class="input-box" placeholder="Password" onChange={inputPassword} />
+                    <input type="password" name="password" id="password" class="input-box" placeholder="Password" onChange={inputPassword} />
                     <br />
                     <input type="button" class="signup-btn" onClick={signUpButton} value="SIGN UP" />
                     
