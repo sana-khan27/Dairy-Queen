@@ -7,6 +7,7 @@ import { getCarts } from "../reducks/carts/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../reducks/user/selectors";
 import { getItems } from "../reducks/items/selectors";
+import Footer from "../components/Common/Footer";
 
 
 export default function Cart() {
@@ -46,6 +47,7 @@ export default function Cart() {
         )}
     </ul>
     </section>
+    <Footer/>
      </>
     ) 
               }

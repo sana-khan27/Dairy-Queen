@@ -6,6 +6,7 @@ import {getItems} from "../reducks/items/selectors"
 import {fetchItems} from "../reducks/items/operations"
 import {fetchCarts} from "../reducks/carts/operations"
 import Item from "../components/Common/Item"
+import Footer from '../components/Common/Footer'
 
 
 export default function Home() {
@@ -35,6 +36,8 @@ export default function Home() {
         ))}
     </ul>
     </section>
+    <Footer />
     </>
+    
   )
 }

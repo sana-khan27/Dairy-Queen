@@ -8,18 +8,28 @@ import { getUser } from "./reducks/user/selectors";
 import { fetchUserFromLocalStorage } from "./reducks/user/operations";
 import { getSubtotal } from "./reducks/carts/selectors";
 
+let pageUrl = window.location.toString();
 function App() {
+  const [showFooter, setShowFooter] = useState(true);
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const user = getUser(selector);
   const subtotal = getSubtotal(selector);
+  useEffect(() => {
+    if (
+      pageUrl.includes("Shipping") ||
+      pageUrl.includes("order-confirmation")
+    ) {
+      setShowFooter(false);
+    }
+    dispatch(fetchUserFromLocalStorage());
+  }, []);
   return (
     <>
-    <Header/>
-    <Router/>
-    <Footer price={subtotal} />
+      <Header />
+      <Router />
+      {showFooter && <Footer price={subtotal} />}
     </>
   );
 }
-
 export default App;
