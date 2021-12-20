@@ -17,8 +17,8 @@ function App() {
   const subtotal = getSubtotal(selector);
   useEffect(() => {
     if (
-      pageUrl.includes("Shipping") ||
-      pageUrl.includes("order-confirmation")
+      pageUrl.includes("Shipment") ||
+      pageUrl.includes("Thankyou")
     ) {
       setShowFooter(false);
     }

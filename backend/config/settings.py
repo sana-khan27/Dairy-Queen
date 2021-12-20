@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'apps.carts',
     'apps.orders',
     'apps.order_items',
-    'cloudinary',
     'django_filters',
 ]
 
@@ -92,16 +91,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # Heroku Database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'daqd0tr13rqj63',
-        'USER': 'qswcizgxaqwdgy',
-        'PORT': 5432,
-        'HOST': 'ec2-18-210-95-55.compute-1.amazonaws.com',
-        'PASSWORD': '58a5370b735182e1ce941749a446002228a1441c483f33a36dd63fb2e989f610',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'daqd0tr13rqj63',
+#         'USER': 'qswcizgxaqwdgy',
+#         'PORT': 5432,
+#         'HOST': 'ec2-18-210-95-55.compute-1.amazonaws.com',
+#         'PASSWORD': '58a5370b735182e1ce941749a446002228a1441c483f33a36dd63fb2e989f610',
+#     }
+# }
 
 # Local Database
 DATABASES = {

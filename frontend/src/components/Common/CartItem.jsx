@@ -27,6 +27,7 @@ export default function CartItem({cart}) {
         <div class="info1">
           <p class="item-name">{cart.item.name}</p>
           <p class="item-description">{cart.item.description}</p>
+          <img src={"https://res.cloudinary.com/dmnpi3ish/" + cart.item.image}class="item-image" alt=""/>
         </div>
         <div class="info2">
           <p class="price">$ {cart.item.price}</p>

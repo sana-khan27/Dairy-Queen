@@ -18,7 +18,7 @@ export default function Footer({ price }) {
               <button>Check your Cart</button>
             </a>
           ) : (
-            <a href="/Shipping">
+            <a href="/Shipment">
               <button>Checkout</button>
             </a>
           )}

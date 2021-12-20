@@ -3,11 +3,10 @@ import axios from "axios";
 const LOGIN_USER_KEY = "LOGIN_USER_KEY"
 
 var baseURL;
-if (process.env.REACT_APP_ENVIRONMENT && process.env.REACT_APP_ENVIRONMENT === "PRODUCTION") {
-    baseURL = process.env.REACT_APP_API_BASE_URL;
-} else {
+// if (process.env.REACT_APP_ENVIRONMENT && process.env.REACT_APP_ENVIRONMENT === "PRODUCTION") {
+//     baseURL = process.env.REACT_APP_API_BASE_URL;
+// } else {
     baseURL = "https://dairy-queen-backened.herokuapp.com/";
-}
 
 
 const api = axios.create({
